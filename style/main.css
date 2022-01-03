@@ -1,0 +1,88 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+}
+
+.wrapper {
+  background-image: url(../img/blur-back.jpg);
+  background-size: cover;
+  text-align: center;
+}
+
+.wrapper .header {
+  background-color: rgba(25, 37, 51, 0.6);
+}
+
+.wrapper .header .header-title {
+  margin: 0;
+  padding: 50px;
+  color: #2de7cf;
+  font-size: 3.2em;
+  font-weight: bold;
+  text-shadow: 0px 0px 3px #2de7cf;
+}
+
+.wrapper #bet-form {
+  margin: 100px;
+}
+
+.wrapper #bet-form .section-title {
+  color: #fff;
+  font-weight: normal;
+  margin-bottom: 40px;
+  font-size: 1.6em;
+  text-shadow: 0px 0px 3px #2de7cf;
+}
+
+.wrapper #bet-form #bet {
+  width: 250px;
+  padding: 10px;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.wrapper #bet-form .button {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2em;
+  border-radius: 20px;
+  border: 2px solid #2de7cf;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: rgba(25, 37, 51, 0.2);
+  color: #2de7cf;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.wrapper #bet-form .button:hover {
+  background-color: #2de7cf;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 12px #fff;
+          box-shadow: 0px 0px 12px #fff;
+}
+
+.wrapper #bet-form .button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.wrapper .footer {
+  background-color: rgba(25, 37, 51, 0.3);
+}
+
+.wrapper .footer .footer__item {
+  width: 50%;
+  min-width: 200px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.wrapper .footer .footer__item .footer__img {
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */
