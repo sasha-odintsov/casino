@@ -7,7 +7,7 @@
     <title>Casino</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -27,8 +27,24 @@
                     <input type="number" placeholder="Сделать ставку" id="bet">
                 </div>
                 <div>
-                    <button class="button">Бросить кубики</button>
+                    <button type="button" class="button">Бросить кубики</button>
                 </div>
+            </form>
+        </section>
+        <!-- section for result -->
+        <section id="bet-result">
+            <h2 class="section-title">
+                Ваш баланс: <strong>500$</strong>
+            </h2>
+            <p class="section-description">
+                На кубиках <strong id="dice-first-result">4</strong>, 
+                <strong id="dice-second-result">4</strong>
+            </p>
+            <p class="section-description">
+                Ваша ставка в <strong id="bet-amound">100$</strong> не сыграла
+            </p>
+            <form>
+                <button type="button" class="button">Жаль, ну ладно</button>
             </form>
         </section>
         <footer class="footer">

@@ -1,8 +1,13 @@
+html {
+  font-size: 18px;
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   font-family: 'Jost', sans-serif;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -19,35 +24,47 @@ body {
   margin: 0;
   padding: 50px;
   color: #2de7cf;
-  font-size: 3.2em;
+  font-size: 2.8rem;
   font-weight: bold;
   text-shadow: 0px 0px 3px #2de7cf;
 }
 
-.wrapper #bet-form {
+.wrapper #bet-form,
+.wrapper #bet-result {
   margin: 100px;
 }
 
-.wrapper #bet-form .section-title {
+.wrapper #bet-form .section-title,
+.wrapper #bet-result .section-title {
   color: #fff;
   font-weight: normal;
   margin-bottom: 40px;
-  font-size: 1.6em;
+  font-size: 1.5rem;
   text-shadow: 0px 0px 3px #2de7cf;
 }
 
-.wrapper #bet-form #bet {
+.wrapper #bet-form .section-description,
+.wrapper #bet-result .section-description {
+  font-size: 1.1rem;
+  text-shadow: 0px 0px 2px #2de7cf;
+  color: #252525;
+  margin: 20px;
+}
+
+.wrapper #bet-form #bet,
+.wrapper #bet-result #bet {
   width: 250px;
   padding: 10px;
   font-family: 'Jost', sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1rem;
   margin-bottom: 30px;
+  color: #252525;
 }
 
-.wrapper #bet-form .button {
+.wrapper #bet-form .button,
+.wrapper #bet-result .button {
   font-family: 'Jost', sans-serif;
-  font-size: 1.2em;
+  font-size: 1rem;
   border-radius: 20px;
   border: 2px solid #2de7cf;
   cursor: pointer;
@@ -58,14 +75,16 @@ body {
   transition: all .2s ease-in;
 }
 
-.wrapper #bet-form .button:hover {
+.wrapper #bet-form .button:hover,
+.wrapper #bet-result .button:hover {
   background-color: #2de7cf;
   color: #fff;
-  -webkit-box-shadow: 0px 0px 12px #fff;
-          box-shadow: 0px 0px 12px #fff;
+  -webkit-box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
+          box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.6);
 }
 
-.wrapper #bet-form .button:active {
+.wrapper #bet-form .button:active,
+.wrapper #bet-result .button:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
