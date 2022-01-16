@@ -45,9 +45,11 @@ body {
   text-shadow: 0px 0px 3px #2de7cf;
 }
 
-.wrapper #bet-form .section-description,
+.wrapper #bet-form .section-description, .wrapper #bet-form #result-text,
 .wrapper #bet-result .section-description,
-.wrapper #bet-point .section-description {
+.wrapper #bet-result #result-text,
+.wrapper #bet-point .section-description,
+.wrapper #bet-point #result-text {
   font-size: 1.1rem;
   text-shadow: 0px 0px 2px #2de7cf;
   color: #252525;

@@ -21,52 +21,53 @@
         <!-- section for betting -->
         <section id="bet-form">
             <h2 class="section-title">
-                Ваш баланс: <strong>500$</strong>
+                Ваш баланс: <strong id="balance"></strong>
             </h2>
             <form>
                 <div>
                     <input type="number" placeholder="Сделать ставку" id="bet">
                 </div>
                 <div>
-                    <button type="button" class="button">Бросить кубики</button>
+                    <button type="button" class="button" onclick="rollDice()">Бросить кубики</button>
                 </div>
             </form>
         </section>
         <!-- section for result -->
         <section id="bet-result">
             <h2 class="section-title">
-                Ваш баланс: <strong>500$</strong>
+                Ваш баланс: <strong id="balance-result"></strong>
             </h2>
             <p class="section-description">
-                На кубиках: <strong id="dice-first-result">4</strong>, 
-                <strong id="dice-second-result">4</strong>
+                На кубиках: <strong id="dice-first-result"></strong>, 
+                <strong id="dice-second-result"></strong>
             </p>
-            <p class="section-description">
-                Ваша ставка в <strong id="bet-amound">100$</strong> не сыграла
+            <p id="result-text">
+                <strong></strong>
             </p>
             <form>
-                <button type="button" class="button">Жаль, ну ладно</button>
+                <button type="button" class="button" onclick="tryMore()">Попробывать еще</button>
             </form>
         </section>
         <!-- section for point -->
         <section id="bet-point">
             <h2 class="section-title">
-                Ставка: <strong>50$</strong>
+                Ставка: <strong id="bet-amound"></strong>
             </h2>
             <p class="section-description">
-                На кубиках: <strong id="dice-first-result">1</strong>, 
-                <strong id="dice-second-result">2</strong>
+                На кубиках: <strong id="dice-first-point"></strong>, 
+                <strong id="dice-second-point"></strong>
             </p>
             <p class="section-description">
-                Твое очко - <strong>3</strong>
+                Твое очко - <strong id="point"></strong>
             </p>
-            <p class="section-description">
+            <p class="section-description point-txt">
                 Продолжай бросать
             </p>
             <form>
                 <button type="button" class="button">Бросить еще раз</button>
             </form>
         </section>
+        <!-- footer -->
         <footer class="footer">
             <div class="footer__item">
                 <img src="img/dice.png" alt="dice" class="footer__img">
