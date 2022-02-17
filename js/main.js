@@ -39,14 +39,19 @@ function rollDice() {
     document.getElementById("dice-second-result").innerHTML = cube2;
 }
 
-function getResultDice(a, b) { 
+function getResultDice (a, b) { 
     let sum = a + b;
-    if (sum === 7 || sum === 11) {
-        return "win";
-    } else  {
-        return "lose";
-    } 
+    return (sum === 7 || sum === 11) ? "win" : "lose";
 }
+
+// function getResultDice(a, b) { 
+//     let sum = a + b;
+//     if (sum === 7 || sum === 11) {
+//         return "win";
+//     } else  {
+//         return "lose";
+//     } 
+// }
 
 //----point try------
 // function rollDice() {
