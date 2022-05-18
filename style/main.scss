@@ -3,7 +3,7 @@ $colorDesc: #252525;
 $backgroundDark: #192533;
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
@@ -68,8 +68,14 @@ body {
             font-family: 'Jost',
             sans-serif;
             font-size: 1rem;         
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             color: $colorDesc;
+        }
+
+        #input-error {
+            margin: 0 0 10px 0;
+            color: #a01740;
+            text-shadow: 0px 0px 8px #9c9c9c;
         }
 
         .button {
@@ -117,7 +123,7 @@ body {
 
 @media screen and (max-width: 720px) {
     html {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .wrapper {

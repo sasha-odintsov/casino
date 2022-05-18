@@ -52,6 +52,7 @@ function rollDice() {
     let decision = getResultDice(cube1, cube2);
     let bet = document.getElementById("bet").value;
     let betWin = bet * 2;
+    let error = document.getElementById('input-error');
     document.getElementById("balance-result").innerHTML = balance + "$";
     document.getElementById("dice-first-result").innerHTML = cube1;
     document.getElementById("dice-second-result").innerHTML = cube2;
@@ -60,28 +61,35 @@ function rollDice() {
         decision = getResultPoint(cube1, cube2, rolledPoint);
     }
 
-    if (decision === "point") {
-        if (!rolledPoint) {
-            rolledPoint = sum;
-        }; 
-        layout("bet-point");
-        document.getElementById("bet-amound").innerHTML = bet + "$";
-        document.getElementById("point").innerHTML =  rolledPoint;
-        document.getElementById("dice-first-point").innerHTML = cube1;
-        document.getElementById("dice-second-point").innerHTML = cube2;   
+    if (!bet.length || bet > balance) {
+        error.innerHTML = 'Некорректная ставка';
+        return;
     } else {
-        layout("bet-result");
-        rolledPoint = 0;
-        if (decision === "win") {
-            document.getElementById("result-text").innerHTML = `Вы выграли, и получаете <strong>${betWin}$</strong>`;
-            balance = balance + betWin;
+        if (decision === "point") {
+            if (!rolledPoint) {
+                rolledPoint = sum;
+            }; 
+            layout("bet-point");
+            document.getElementById("bet-amound").innerHTML = bet + "$";
+            document.getElementById("point").innerHTML =  rolledPoint;
+            document.getElementById("dice-first-point").innerHTML = cube1;
+            document.getElementById("dice-second-point").innerHTML = cube2;   
         } else {
-            document.getElementById("result-text").innerHTML = `Ваша ставка в <strong>${bet}$</strong> не сыграла`;
-            balance = balance - bet;
-        }
-        document.getElementById("balance").innerHTML = balance + "$";
-        document.querySelector('.button-result').onclick = tryMore;
-    } 
+            layout("bet-result");
+            rolledPoint = 0;
+            let result = document.getElementById("result-text");
+            if (decision === "win") {
+                result.innerHTML = `Вы выграли, и получаете <strong>${betWin}$</strong>`;
+                balance = balance + betWin;
+            } else {
+                result.innerHTML = `Ваша ставка в <strong>${bet}$</strong> не сыграла`;
+                balance = balance - bet;
+            }
+            document.getElementById("balance").innerHTML = balance + "$";
+            document.querySelector('.button-result').onclick = tryMore;
+        } 
+        error.innerHTML = '';
+    }
 }
 
 //*****without point*****//
