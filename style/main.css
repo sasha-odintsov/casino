@@ -29,12 +29,51 @@ body {
 
 .wrapper .header {
   background-color: rgba(25, 37, 51, 0.6);
+  color: #2de7cf;
+}
+
+.wrapper .header .header-rules {
+  position: absolute;
+  right: 0;
+  display: inline-block;
+}
+
+.wrapper .header .header-rules .header-rules-title {
+  text-align: end;
+  margin: 5px;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.wrapper .header .header-rules .header-rules-list {
+  text-align: start;
+  background-color: #303241;
+  margin: 0 5px 0 0;
+  border-radius: 10px;
+  line-height: 1;
+  display: none;
+  position: absolute;
+  right: 0;
+  -webkit-box-shadow: 0 4px 6px rgba(45, 231, 207, 0.2), 2px 6px 8px rgba(45, 231, 207, 0.2);
+          box-shadow: 0 4px 6px rgba(45, 231, 207, 0.2), 2px 6px 8px rgba(45, 231, 207, 0.2);
+  width: 220px;
+}
+
+.wrapper .header .header-rules .header-rules-list .header-rules-list-item {
+  font-size: 1rem;
+  padding: 5px 5px 5px 0;
+  margin-left: -5px;
+}
+
+.wrapper .header .header-rules:hover .header-rules-list {
+  display: block;
 }
 
 .wrapper .header .header-title {
   margin: 0;
   padding: 40px;
-  color: #2de7cf;
   font-size: 2.2rem;
   font-weight: bold;
   text-shadow: 0px 0px 3px #2de7cf;
@@ -124,7 +163,7 @@ body {
 .wrapper .footer .footer__item {
   width: 40%;
   min-width: 150px;
-  max-width: 250px;
+  max-width: 220px;
   margin: 0 auto;
   padding: 10px;
 }

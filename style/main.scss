@@ -29,11 +29,50 @@ body {
     
     .header {
        background-color: rgba($backgroundDark, $alpha: .6);
-       
+       color: $colorMain;
+
+       .header-rules {        
+           position: absolute;
+           right: 0;
+           display: inline-block;
+           
+           .header-rules-title {
+                text-align: end;  
+                margin: 5px;
+                margin-bottom: 0;
+                font-size: 1rem;
+                font-weight: normal;
+                cursor: pointer;
+           }
+           
+           .header-rules-list {
+               text-align: start;
+               background-color: #303241;
+               margin: 0 5px 0 0;
+               border-radius: 10px;
+               line-height: 1;
+               display: none;
+               position: absolute;
+               right: 0;
+               box-shadow: 0 4px 6px rgba($colorMain, $alpha: .2), 
+               2px 6px 8px rgba($colorMain, $alpha: .2);
+               width: 220px;
+               
+               .header-rules-list-item {
+                   font-size: 1rem;    
+                   padding: 5px 5px 5px 0;   
+                   margin-left: -5px;        
+                }
+            }
+        }
+        
+        .header-rules:hover .header-rules-list {
+            display: block;
+        }
+
         .header-title {
             margin: 0;
             padding: 40px;
-            color: $colorMain;
             font-size: 2.2rem;
             font-weight: bold;
             text-shadow: 0px 0px 3px $colorMain;
@@ -110,7 +149,7 @@ body {
         .footer__item {
             width: 40%;
             min-width: 150px;
-            max-width: 250px;
+            max-width: 220px;
             margin: 0 auto;
             padding: 10px;
 
