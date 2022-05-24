@@ -92,6 +92,13 @@ function rollDice() {
     }
 }
 
+document.querySelector('.header-rules').addEventListener('mouseover', function() {
+    document.querySelector('.header-rules-list').style.display = 'block';
+});
+document.querySelector('.header-rules').addEventListener('mouseout', function() {
+    document.querySelector('.header-rules-list').style.display = 'none';
+});
+
 //*****without point*****//
 
 // function rollDice() { 
