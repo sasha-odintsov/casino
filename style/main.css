@@ -40,17 +40,20 @@ body {
 
 .wrapper .header .header-rules .header-rules-title {
   text-align: end;
-  margin: 5px;
-  margin-bottom: 0;
+  margin: 5px 10px 10px 5px;
   font-size: 0.9rem;
   font-weight: normal;
   cursor: pointer;
 }
 
+.wrapper .header .header-rules .header-rules-list li:first-of-type {
+  list-style-type: none;
+}
+
 .wrapper .header .header-rules .header-rules-list {
   text-align: start;
   background-color: #303241;
-  margin: 0 5px 0 0;
+  margin: 5px 10px 0 0;
   border-radius: 10px;
   line-height: 1;
   display: none;
@@ -61,14 +64,43 @@ body {
   width: 220px;
 }
 
-.wrapper .header .header-rules .header-rules-list .header-rules-list-item {
-  font-size: 1rem;
-  padding: 5px 5px 5px 0;
-  margin-left: -5px;
+.wrapper .header .header-rules .header-rules-list .header-rules-close {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 12px;
 }
 
-.wrapper .header .header-rules:hover .header-rules-list {
-  display: block;
+.wrapper .header .header-rules .header-rules-list .header-rules-close::after {
+  content: 'x';
+  color: #303241;
+  border-radius: 50%;
+  background-color: #2de7cf;
+  position: absolute;
+  top: -1.6rem;
+  right: -0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.wrapper .header .header-rules .header-rules-list .header-rules-list-item {
+  font-size: 1rem;
+  padding: 5px 10px 5px 0;
+  margin-left: -10px;
+}
+
+.wrapper .header .header-rules .header-rules-list .header-rules-list-item:last-of-type {
+  padding-bottom: 15px;
 }
 
 .wrapper .header .header-title {

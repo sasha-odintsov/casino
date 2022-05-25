@@ -61,7 +61,7 @@ function rollDice() {
         decision = getResultPoint(cube1, cube2, rolledPoint);
     }
 
-    if (!bet.length || bet > balance) {
+    if (!bet.length || bet > balance || bet == 0) {
         error.innerHTML = 'Некорректная ставка';
         return;
     } else {
@@ -92,11 +92,13 @@ function rollDice() {
     }
 }
 
+let rules = document.querySelector('.header-rules-list');
+
 document.querySelector('.header-rules').addEventListener('mouseover', function() {
-    document.querySelector('.header-rules-list').style.display = 'block';
+    rules.style.display = 'block';
 });
-document.querySelector('.header-rules').addEventListener('mouseout', function() {
-    document.querySelector('.header-rules-list').style.display = 'none';
+document.querySelector('.header-rules-close').addEventListener('click', function() {
+    rules.style.display = 'none';
 });
 
 //*****without point*****//

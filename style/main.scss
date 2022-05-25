@@ -1,6 +1,7 @@
 $colorMain: #2de7cf;
 $colorDesc: #252525;
 $backgroundDark: #192533;
+$backgroundDropDown: #303241;
 
 html {
     font-size: 18px;
@@ -38,17 +39,20 @@ body {
            
            .header-rules-title {
                 text-align: end;  
-                margin: 5px;
-                margin-bottom: 0;
+                margin: 5px 10px 10px 5px;
                 font-size: 0.9rem;
                 font-weight: normal;
                 cursor: pointer;
            }
+
+           .header-rules-list li:first-of-type {
+            list-style-type: none;
+            }
            
            .header-rules-list {
                text-align: start;
-               background-color: #303241;
-               margin: 0 5px 0 0;
+               background-color: $backgroundDropDown;
+               margin: 5px 10px 0 0;
                border-radius: 10px;
                line-height: 1;
                display: none;
@@ -57,17 +61,40 @@ body {
                box-shadow: 0 4px 6px rgba($colorMain, $alpha: .2), 
                2px 6px 8px rgba($colorMain, $alpha: .2);
                width: 220px;
+
+               .header-rules-close {
+                   position: relative;
+                   display: block;
+                   text-decoration: none;
+                   margin-bottom: 12px;
+               }
+
+               .header-rules-close::after {
+                   content: 'x';
+                   color: $backgroundDropDown;
+                   border-radius: 50%;
+                   background-color: $colorMain;
+                   position: absolute;
+                   top: -1.6rem;
+                   right: -0.5rem;
+                   width: 2rem;
+                   height: 2rem;                
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   cursor: pointer;
+               }
                
                .header-rules-list-item {
                    font-size: 1rem;    
-                   padding: 5px 5px 5px 0;   
-                   margin-left: -5px;        
+                   padding: 5px 10px 5px 0;   
+                   margin-left: -10px;        
+                }
+
+                .header-rules-list-item:last-of-type {
+                    padding-bottom: 15px;
                 }
             }
-        }
-        
-        .header-rules:hover .header-rules-list {
-            display: block;
         }
 
         .header-title {
