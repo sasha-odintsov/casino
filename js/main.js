@@ -101,6 +101,18 @@ document.querySelector('.header-rules-close').addEventListener('click', function
     rules.style.display = 'none';
 });
 
+window.addEventListener("orientationchange", function () {
+    const footer = document.querySelector('.footer');
+    const header = document.querySelector('.header-title');
+    if (window.orientation == 90 && innerWidth < 499) {
+        footer.style.display = 'none';
+        header.style.padding = '20px';
+    } else {
+        footer.style.display = 'block';
+        header.style.padding = '30px';
+    }
+});
+
 //*****without point*****//
 
 // function rollDice() { 
