@@ -1,12 +1,12 @@
+/* eslint-disable linebreak-style */
 function getResultPoint(a, b, point) {
-    let sum = a + b;
-    if (sum === 7) {
-        return "lose";        
-    } else if (sum === point) {
-        return "win";
-    } else {
-        return "point";        
-    }
+  const sum = a + b;
+  if (sum === 7) {
+    return 'lose';
+  } if (sum === point) {
+    return 'win';
+  }
+  return 'point';
 }
 
 export default getResultPoint;
