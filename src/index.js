@@ -8,8 +8,10 @@ import getResultPoint from './lib/getResultPoint';
     
     let balance = 500;
     let rolledPoint = 0;
+    const betBtn = document.querySelector('.bet');
+    const balanceResult = document.querySelector("#balance");
     
-    document.querySelector("#balance").innerHTML = balance + "$";
+    balanceResult.innerHTML = balance + "$";
        
     function rollDice() {
         let cube1 = getRandomInt(1, 6);
@@ -28,6 +30,9 @@ import getResultPoint from './lib/getResultPoint';
         }
     
         if (!bet.length || bet > balance || bet == 0) {
+            if (balance === 0) {
+                return;
+            }
             error.innerHTML = 'Некорректная ставка';
             return;
         } else {
@@ -51,16 +56,23 @@ import getResultPoint from './lib/getResultPoint';
                     result.innerHTML = `Ваша ставка в <strong>${bet}$</strong> не сыграла`;
                     balance = balance - bet;
                 }
-                document.getElementById("balance").innerHTML = balance + "$";
+                balanceResult.innerHTML = balance + "$";
                 document.querySelector('.button-result').addEventListener('click', () => {
                     layout("bet-form");
                 });
             } 
+            if (balance === 0) {
+                document.getElementById("bet").style.display = 'none';
+                betBtn.innerHTML = 'Начать заново';
+                betBtn.addEventListener('click', () => {
+                    location.reload();
+                });
+            }
             error.innerHTML = '';
         }
     }
     
-    document.querySelector('.bet').onclick = rollDice;
+    betBtn.onclick = rollDice;
     document.querySelector('.point').onclick = rollDice;
     
     let rules = document.querySelector('.header-rules-list');
