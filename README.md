@@ -1,6 +1,6 @@
 # Casino
 
-This is game of dice
+This is a game of dice
 
 Website: https://casino2022.netlify.app
 
