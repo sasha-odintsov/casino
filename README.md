@@ -1,8 +1,9 @@
 # Casino
 
-This is a game of dice
+Simulator of the Dice game.\
+This is a Single Page Application which is developed in pure JavaScript without the use of frameworks.
 
-Website: https://casino2022.netlify.app
+Demo: https://casino2022.netlify.app
 
 ## Rules 
 
