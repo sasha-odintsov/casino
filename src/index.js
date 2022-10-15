@@ -32,7 +32,7 @@ import getResultPoint from './lib/getResultPoint';
       decision = getResultPoint(cube1, cube2, rolledPoint);
     }
 
-    if (!bet.length || bet > balance || bet === 0) {
+    if (!bet.length || bet > balance || bet <= 0) {
       if (balance === 0) {
         return;
       }
